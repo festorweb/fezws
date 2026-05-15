@@ -754,6 +754,10 @@ h3 {
     padding-bottom: 18px;
   }
 
+  .hero-content h1 {
+    margin-bottom: 130px;
+  }
+
   .hero-actions .button {
     flex: 1 1 160px;
   }
