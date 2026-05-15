@@ -118,7 +118,10 @@
   <main>
     <section class="hero">
       <div class="hero-media" aria-hidden="true">
-        <img src="assets/images/banner.webp" alt="" fetchpriority="high">
+        <picture>
+          <source srcset="assets/images/banner-mobile.webp" media="(max-width: 820px)">
+          <img src="assets/images/banner.webp" alt="" fetchpriority="high">
+        </picture>
       </div>
       <div class="hero-overlay"></div>
       <div class="hero-content">
