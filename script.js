@@ -39,6 +39,26 @@ const observer = new IntersectionObserver(
 
 document.querySelectorAll(".reveal").forEach((item) => observer.observe(item));
 
+document.querySelectorAll(".nav-call, .hero-actions a[href^='tel:']").forEach((callButton) => {
+  callButton.addEventListener("click", (event) => {
+    const isDesktop = window.matchMedia("(min-width: 821px)").matches;
+
+    if (!isDesktop) {
+      return;
+    }
+
+    event.preventDefault();
+    const contactSection = document.querySelector("#iletisim");
+
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    window.location.href = "index.html#iletisim";
+  });
+});
+
 if (quoteForm) {
   quoteForm.addEventListener("submit", (event) => {
     event.preventDefault();
