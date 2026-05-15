@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
+
 :root {
   --ink: #13201b;
   --muted: #617068;
@@ -62,19 +64,25 @@ a {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  font-weight: 800;
   letter-spacing: 0;
+}
+
+.brand > span {
+  font-family: "Abril Fatface", Georgia, serif;
+  font-size: clamp(41px, 2.2vw, 30px);
+  font-weight: 400;
+  line-height: 1;
 }
 
 .brand-logo {
   display: block;
-  width: 40px;
-  height: 40px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
+  width: 48px;
+  height: 48px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
   background: var(--signal);
   object-fit: contain;
-  padding: 4px;
+  padding: 1px;
 }
 
 .site-nav {
@@ -173,6 +181,10 @@ h1 {
   font-size: clamp(56px, 11vw, 132px);
   line-height: 0.9;
   letter-spacing: 0;
+}
+
+.hero-feza {
+  color: var(--signal);
 }
 
 h2 {
