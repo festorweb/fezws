@@ -27,5 +27,5 @@ http
     });
   })
   .listen(port, "127.0.0.1", () => {
-    console.log(`Feza Servis preview: http://127.0.0.1:${port}/`);
+    console.log(`FEZA Servis preview: http://127.0.0.1:${port}/`);
   });
