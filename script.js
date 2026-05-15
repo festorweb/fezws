@@ -44,7 +44,7 @@ if (quoteForm) {
     event.preventDefault();
     const data = new FormData(quoteForm);
     const message = [
-      "Merhaba FEZA Servis, hizmet talebi oluşturmak istiyorum.",
+      "Merhaba FEZA Kurtarma, hizmet talebi oluşturmak istiyorum.",
       `Ad Soyad: ${data.get("name")}`,
       `Telefon: ${data.get("phone")}`,
       `Hizmet: ${data.get("service")}`,

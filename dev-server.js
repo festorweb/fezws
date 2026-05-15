@@ -27,5 +27,5 @@ http
     });
   })
   .listen(port, "127.0.0.1", () => {
-    console.log(`FEZA Servis preview: http://127.0.0.1:${port}/`);
+    console.log(`FEZA Kurtarma preview: http://127.0.0.1:${port}/`);
   });

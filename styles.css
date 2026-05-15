@@ -178,8 +178,8 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(56px, 11vw, 132px);
-  line-height: 0.9;
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
@@ -201,9 +201,9 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 650px;
+  max-width: 620px;
   color: rgba(255, 255, 255, 0.86);
-  font-size: clamp(18px, 2.4vw, 24px);
+  font-size: clamp(17px, 1.8vw, 20px);
   line-height: 1.5;
 }
 
@@ -410,7 +410,7 @@ h3 {
 
 .service-link {
   display: inline-flex;
-  width: max-content;
+  max-width: 100%;
   align-items: center;
   justify-content: center;
   margin-top: auto;
@@ -419,6 +419,39 @@ h3 {
   background: var(--card-accent);
   color: #fff;
   font-weight: 850;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.districts {
+  background: var(--paper);
+}
+
+.districts-copy {
+  max-width: 920px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.district-grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.district-grid span {
+  display: grid;
+  min-height: 46px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--field-dark);
+  font-size: 14px;
+  font-weight: 850;
+  text-align: center;
 }
 
 .detail-page {
@@ -731,6 +764,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .district-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .service-card {
     grid-template-rows: 210px 1fr;
   }
@@ -800,7 +837,7 @@ h3 {
   }
 
   h1 {
-    font-size: 58px;
+    font-size: 44px;
   }
 
   h2 {
@@ -808,10 +845,14 @@ h3 {
   }
 
   .hero-copy {
-    font-size: 17px;
+    font-size: 16px;
   }
 
   .contact-card {
     padding: 18px;
+  }
+
+  .district-grid {
+    grid-template-columns: 1fr;
   }
 }
