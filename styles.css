@@ -264,14 +264,14 @@ h3 {
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
   max-width: 560px;
-  background: rgba(255, 255, 255, 0.18);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(14px);
+  background: rgba(255, 255, 255, 0.086);
+  border: 1px solid rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(6px);
 }
 
 .hero-strip div {
-  padding: 18px;
-  background: rgba(13, 26, 20, 0.35);
+  padding: 16px;
+  background: rgba(13, 26, 20, 0);
 }
 
 .hero-strip strong,
@@ -280,7 +280,7 @@ h3 {
 }
 
 .hero-strip strong {
-  font-size: 28px;
+  font-size: 22px;
 }
 
 .hero-strip span {
