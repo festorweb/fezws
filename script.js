@@ -26,6 +26,13 @@ if (navToggle && nav) {
   });
 }
 
+document.querySelectorAll(".brand[href='#top']").forEach((brandLink) => {
+  brandLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+});
+
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
