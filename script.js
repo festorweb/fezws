@@ -6,6 +6,7 @@ const whatsappNumber = "905454491860";
 
 function updateHeader() {
   header.classList.toggle("scrolled", window.scrollY > 24);
+  document.body.classList.toggle("show-mobile-actions", window.scrollY > 260);
 }
 
 window.addEventListener("scroll", updateHeader);
