@@ -103,9 +103,6 @@ a {
 }
 
 .nav-call {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
   background: var(--signal);
   color: var(--ink);
 }
@@ -167,17 +164,8 @@ a {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 860px;
+  max-width: 780px;
   padding-bottom: 28px;
-}
-
-.hero-content .eyebrow::after {
-  content: "";
-  display: block;
-  width: 74px;
-  height: 2px;
-  margin-top: 22px;
-  background: var(--signal);
 }
 
 .eyebrow {
@@ -198,8 +186,8 @@ p {
 
 h1 {
   margin-bottom: 18px;
-  font-size: clamp(36px, 5.6vw, 68px);
-  line-height: 1.06;
+  font-size: clamp(44px, 8vw, 96px);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
@@ -224,7 +212,7 @@ h3 {
   max-width: 620px;
   color: rgba(255, 255, 255, 0.86);
   font-size: clamp(17px, 1.8vw, 20px);
-  line-height: 1.65;
+  line-height: 1.5;
 }
 
 .hero-actions,
@@ -242,19 +230,11 @@ h3 {
   min-height: 50px;
   align-items: center;
   justify-content: center;
-  gap: 10px;
   border: 1px solid transparent;
   border-radius: 999px;
   padding: 14px 22px;
   font-weight: 850;
   cursor: pointer;
-}
-
-.button-icon {
-  width: 21px;
-  height: 21px;
-  flex: 0 0 auto;
-  object-fit: contain;
 }
 
 .button.primary {
@@ -265,36 +245,6 @@ h3 {
 .button.ghost {
   border-color: rgba(255, 255, 255, 0.34);
   color: #fff;
-}
-
-.button.whatsapp {
-  border-color: rgba(106, 166, 111, 0.75);
-  background: rgba(8, 18, 14, 0.34);
-  color: #fff;
-}
-
-.hero-service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 13px;
-  width: max-content;
-  margin-top: 24px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid var(--signal);
-  color: #fff;
-  font-size: 18px;
-  font-weight: 750;
-}
-
-.hero-service-link::before {
-  content: "→";
-  color: var(--signal);
-  font-size: 34px;
-  line-height: 1;
-}
-
-.hero-service-link::after {
-  content: none;
 }
 
 .button.light {
@@ -313,56 +263,27 @@ h3 {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1px;
-  max-width: 760px;
-  background: rgba(10, 18, 15, 0.24);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  backdrop-filter: blur(16px) saturate(130%);
-  -webkit-backdrop-filter: blur(16px) saturate(130%);
+  max-width: 560px;
+  background: rgba(255, 255, 255, 0.086);
+  border: 1px solid rgba(255, 255, 255, 0.071);
+  backdrop-filter: blur(6px);
 }
 
 .hero-strip div {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 4px 14px;
-  align-items: center;
   padding: 16px;
-  background: rgba(13, 26, 20, 0.12);
-  border-right: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.hero-strip div:last-child {
-  border-right: 0;
-}
-
-.stat-icon {
-  grid-row: span 2;
-  display: grid;
-  width: 46px;
-  height: 46px;
-  place-items: center;
-  border-radius: 50%;
-  background: rgba(75, 120, 76, 0.66);
-  color: #fff;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.24);
-}
-
-.stat-icon img {
-  width: 25px;
-  height: 25px;
-  object-fit: contain;
+  background: rgba(13, 26, 20, 0);
 }
 
 .hero-strip strong,
-.hero-strip span:not(.stat-icon) {
+.hero-strip span {
   display: block;
 }
 
 .hero-strip strong {
-  font-size: 20px;
-  line-height: 1.15;
+  font-size: 22px;
 }
 
-.hero-strip span:not(.stat-icon) {
+.hero-strip span {
   color: rgba(255, 255, 255, 0.78);
   font-size: 14px;
 }
@@ -834,75 +755,16 @@ h3 {
   }
 
   .hero-content h1 {
-    margin-bottom: 24px;
-    font-size: 36px;
-    line-height: 1.12;
-  }
-
-  .hero-copy {
-    max-width: 390px;
-    font-size: 19px;
-    line-height: 1.72;
-  }
-
-  .hero-actions {
-    display: grid;
-    align-items: stretch;
-    justify-content: start;
-    width: min(58vw, 220px);
-    gap: 12px;
-    margin-top: 28px;
+    margin-bottom: 30px;
   }
 
   .hero-actions .button {
-    width: 100%;
-    max-width: none;
-    min-height: 52px;
-    font-size: 17px;
-  }
-
-  .hero-service-link {
-    margin-top: 24px;
+    flex: 1 1 160px;
   }
 
   .hero-strip {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    width: 100%;
-    max-width: none;
-    margin-top: 26px;
-  }
-
-  .hero-strip div {
     grid-template-columns: 1fr;
-    grid-template-rows: 42px minmax(38px, auto) auto;
-    justify-items: center;
-    gap: 8px;
-    padding: 14px 8px;
-    align-content: start;
-    text-align: center;
-  }
-
-  .stat-icon {
-    grid-row: auto;
-    width: 42px;
-    height: 42px;
-  }
-
-  .stat-icon img {
-    width: 24px;
-    height: 24px;
-  }
-
-  .hero-strip strong {
-    font-size: 16px;
-    min-height: 38px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .hero-strip span {
-    font-size: 13px;
+    width: 100%;
   }
 
   .intro,
@@ -965,11 +827,9 @@ h3 {
   }
 
   .mobile-actions a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
+    display: grid;
     min-height: 52px;
+    place-items: center;
     border-radius: 999px;
     background: var(--signal);
     color: var(--ink);
