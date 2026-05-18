@@ -528,17 +528,28 @@ h3 {
   margin-top: 28px;
 }
 
-.district-grid span {
+.district-chip {
   display: grid;
   min-height: 46px;
   place-items: center;
-  border: 1px solid var(--line);
+  border: 1px solid transparent;
   border-radius: 999px;
-  background: #fff;
   color: var(--field-dark);
   font-size: 14px;
   font-weight: 850;
   text-align: center;
+}
+
+.district-chip--eskisehir {
+  border-color: #2e9358;
+  background: #2f7d4f;
+  color: #eaf3eb;
+}
+
+.district-chip--afyon {
+  border-color: rgba(195, 151, 39, 0.22);
+  background: #e0b640;
+  color: #4b3b00;
 }
 
 .detail-page {
@@ -1014,7 +1025,4 @@ h3 {
     padding: 18px;
   }
 
-  .district-grid {
-    grid-template-columns: 1fr;
-  }
 }
