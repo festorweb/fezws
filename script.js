@@ -63,7 +63,7 @@ document.querySelectorAll(".nav-call, .hero-actions a[href^='tel:']").forEach((c
       return;
     }
 
-    window.location.href = "index.html#iletisim";
+    window.location.href = "/#iletisim";
   });
 });
 
