@@ -1,0 +1,53 @@
+#sss { scroll-margin-top: 100px; background: #f7f6f1; border-top: 1px solid #ecebe3; }
+.faq-layout { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.4fr); align-items: start; gap: clamp(36px,6vw,88px); max-width: 1180px; margin-inline: auto; }
+.faq-intro { padding-top: 14px; }
+.faq-intro .eyebrow { display: flex; align-items: center; gap: 12px; color: #9b7b35; font-size: 10px; letter-spacing: .14em; }
+.faq-intro .eyebrow::before { content: ""; width: 27px; height: 1px; background: currentColor; }
+#sss h2 { margin: 24px 0; color: #1b241f; font-size: clamp(36px,4.1vw,58px); line-height: 1.07; letter-spacing: -.055em; font-weight: 750; }
+.faq-intro-copy { max-width: 300px; margin: 0 0 28px; color: #777e76; font-size: 14px; line-height: 1.85; }
+.faq-message { display: inline-flex; justify-content: center; align-items: center; gap: 10px; min-height: 48px; padding: 12px 17px; border: 1px solid #c9d4c7; border-radius: 14px; background: #fff; color: #2a4934; font-size: 12px; font-weight: 750; transition: background .2s, border-color .2s; }
+.faq-message svg { width: 21px; height: 21px; }
+.faq-message > span { margin-left: 15px; color: #7f987f; font-size: 17px; }
+.faq-message:hover { background: #edf3eb; border-color: #8baf8d; }
+.faq-call { display: flex; flex-direction: column; align-items: flex-start; gap: 5px; width: fit-content; margin-top: 22px; color: #7b8179; font-size: 11px; }
+.faq-call span { color: #3b473c; font-size: 14px; font-weight: 700; letter-spacing: -.02em; }
+.faq-list { display: grid; gap: 11px; min-width: 0; }
+.faq-question { min-width: 0; overflow: hidden; border: 1px solid #e0e3d9; border-radius: 17px; background: #ffffffb3; transition: border-color .2s, background .2s, box-shadow .2s; }
+.faq-question[open] { border-color: #d8c38f; background: #fff; box-shadow: 0 15px 28px -24px #74634355; }
+.faq-question summary { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 80px; padding: 21px 24px; color: #29352c; font-size: 15px; font-weight: 750; line-height: 1.5; letter-spacing: -.02em; list-style: none; cursor: pointer; }
+.faq-question summary::-webkit-details-marker { display: none; }
+.faq-question summary:hover { color: #796129; }
+.faq-question summary:focus-visible { outline: 2px solid #b49145; outline-offset: -5px; border-radius: 16px; }
+.faq-symbol { position: relative; display: block; flex: 0 0 30px; width: 30px; height: 30px; border: 1px solid #dfe4d9; border-radius: 50%; background: #f6f7f2; color: #5b6a58; }
+.faq-symbol::before, .faq-symbol::after { content: ""; position: absolute; left: 9px; top: 14px; width: 10px; height: 1px; background: currentColor; }
+.faq-symbol::after { transform: rotate(90deg); transition: transform .2s; }
+.faq-question[open] .faq-symbol { border-color: #e7d9b8; background: #f8f0dd; color: #9b7b35; }
+.faq-question[open] .faq-symbol::after { transform: rotate(0); }
+.faq-answer { padding: 0 75px 23px 24px; }
+.faq-answer p { margin: 0; color: #717a70; font-size: 13px; line-height: 1.85; }
+.faq-question[open] .faq-answer { animation: faq-answer-in .24s ease-out; }
+@keyframes faq-answer-in { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: translateY(0); } }
+@media (max-width: 800px) {
+  .faq-layout { grid-template-columns: 1fr; gap: 32px; }
+  .faq-intro { padding-top: 0; }
+  #sss h2 { margin: 20px 0 18px; font-size: clamp(36px,8vw,48px); }
+  #sss h2 br { display: none; }
+  .faq-intro-copy { max-width: 440px; margin-bottom: 22px; }
+  .faq-call { display: inline-flex; margin: 0 0 0 20px; vertical-align: middle; }
+}
+@media (max-width: 480px) {
+  .faq-question summary { min-height: 76px; gap: 16px; padding: 19px 18px; font-size: 14px; }
+  .faq-answer { padding: 0 18px 22px; }
+  .faq-answer p { font-size: 13px; line-height: 1.8; }
+  .faq-message { font-size: 11px; padding-inline: 12px; }
+  .faq-message > span { margin-left: 5px; }
+  .faq-call { margin-left: 13px; }
+  .faq-call span { font-size: 12px; }
+}
+@media (max-width: 360px) {
+  .faq-call { display: flex; margin: 18px 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .faq-message, .faq-question, .faq-symbol::after { transition: none; }
+  .faq-question[open] .faq-answer { animation: none; }
+}

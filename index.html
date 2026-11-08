@@ -64,6 +64,8 @@
       ],
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Adalar, Yıldırım Cd. No:18/C",
+        "postalCode": "26700",
         "addressLocality": "Çifteler",
         "addressRegion": "Eskişehir",
         "addressCountry": "TR"
@@ -106,124 +108,260 @@
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
   <link rel="apple-touch-icon" href="assets/favicon-192.png">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reference-home.css">
+  <link rel="stylesheet" href="gallery.css">
+  <link rel="stylesheet" href="faq.css">
+  <link rel="stylesheet" href="site-shared.css">
+  <script src="page-motion.js"></script>
 </head>
-<body>
-  <header class="site-header" id="top">
-    <a class="brand" href="#top" aria-label="FEZA Kurtarma ana sayfa">
-      <img class="brand-logo" src="assets/logo.png" alt="FEZA Kurtarma logo">
-      <span>FEZA</span>
+<body class="reference-home">
+  <svg class="ref-icon-definitions" xmlns="http://www.w3.org/2000/svg" width="0" height="0" aria-hidden="true" style="position:absolute;overflow:hidden">
+  <symbol id="ref-arrow" viewBox="0 0 32 24"><path d="M2 12h27M20 3l9 9-9 9" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="ref-location" viewBox="0 0 24 24"><path d="M19 9c0 5-7 12-7 12S5 14 5 9a7 7 0 1 1 14 0Z" fill="none" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="9" r="2.5" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+  <symbol id="ref-phone" viewBox="0 0 24 24"><path d="m5 3 4 4-2 3c2 4 4 6 7 7l3-2 4 4-2 3C10 22 2 14 2 6Z" fill="currentColor"/></symbol>
+  <symbol id="ref-whatsapp" viewBox="0 0 24 24"><path d="M20 11.5a8.5 8.5 0 0 1-12.7 7.4L3 20l1.2-4.2A8.5 8.5 0 1 1 20 11.5Z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 7c-1 4 3 8 7 8l1-2-3-1-1 1-2-3 1-1-1-2Z" fill="currentColor"/></symbol>
+</svg>
+  <header class="ref-header" id="top">
+    <a class="ref-brand" href="#anasayfa" aria-label="FEZA Kurtarma ana sayfa">
+      <img class="ref-brand-logo" src="assets/logo.png" alt="" width="48" height="48">
+      <span><b>FEZA</b><em>KURTARMA</em></span>
     </a>
-
-    <button class="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false">
-      <span></span>
-      <span></span>
-    </button>
-
-    <nav class="site-nav" aria-label="Ana menü">
-      <a href="#hizmetler">Yapılan Hizmetler</a>
+    <button class="ref-nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="referenceNav"><span></span><span></span></button>
+    <nav class="ref-nav" id="referenceNav" aria-label="Ana menü">
+      <a href="#hizmetler">Hizmetler</a>
       <a href="#galeri">Galeri</a>
+      <a href="#hizmet-bolgesi">Bölgeler</a>
       <a href="#iletisim">İletişim</a>
-      <a class="nav-call" href="tel:+905454491860"><img class="button-icon" src="assets/icons/phone-dark.png" alt="">Hemen Ara</a>
+      <a class="ref-location" href="#hizmet-bolgesi"><svg><use href="#ref-location"/></svg>Eskişehir • Afyonkarahisar</a>
+      <a class="ref-pill ref-call" href="tel:+905454491860"><svg><use href="#ref-phone"/></svg>Hemen Ara</a>
+      <a class="ref-pill ref-whatsapp" href="https://wa.me/905454491860" target="_blank" rel="noopener"><svg><use href="#ref-whatsapp"/></svg>WhatsApp</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <div class="hero-media" aria-hidden="true">
+    <section class="ref-hero" id="anasayfa" aria-labelledby="homeHeroTitle">
+      <div class="ref-scene" aria-hidden="true">
         <picture>
-          <source srcset="assets/images/banner-mobile.webp" media="(max-width: 820px)">
-          <img src="assets/images/banner.webp" alt="" fetchpriority="high">
+          <source srcset="assets/images/banner-mobile.webp" media="(max-width: 600px)">
+          <img src="assets/images/banner.webp" alt="" width="1672" height="941" fetchpriority="high" decoding="async">
         </picture>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <p class="eyebrow">Eskişehir & Afyonkarahisar</p>
-        <h1>Araç Kurtarma,<br>Bobcat ve<br><span class="hero-feza">Drone İlaçlama</span></h1>
-        <p class="hero-copy">Eskişehir ve Afyonkarahisar'da hızlı, güvenilir ve profesyonel destek. İhtiyacınızı söyleyin, doğru ekipmanla sahaya gelelim.</p>
-        <div class="hero-actions">
-          <a class="button primary" href="tel:+905454491860"><img class="button-icon" src="assets/icons/phone-dark.png" alt="">Hemen Ara</a>
-          <a class="button whatsapp" href="https://wa.me/905454491860" target="_blank" rel="noopener"><img class="button-icon" src="assets/icons/whatsapp-light.png" alt="">WhatsApp</a>
+      <div class="ref-scene-shade" aria-hidden="true"></div>
+
+      <div class="home-hero-layout">
+        <div class="home-hero-copy">
+          <p class="home-hero-eyebrow">Eskişehir &amp; Afyonkarahisar</p>
+          <h1 id="homeHeroTitle"><span>Araç Kurtarma,</span><span>Bobcat ve</span><span class="home-hero-highlight">Drone İlaçlama</span></h1>
+          <p class="home-hero-description">Eskişehir ve Afyonkarahisar'da hızlı, güvenilir ve profesyonel destek.<br>İhtiyacınızı söyleyin, doğru ekipmanla sahaya gelelim.</p>
+          <div class="home-hero-actions">
+            <a class="home-hero-button home-hero-button--call" href="tel:+905454491860"><svg aria-hidden="true"><use href="#ref-phone"/></svg>Hemen Ara</a>
+            <a class="home-hero-button home-hero-button--whatsapp" href="https://wa.me/905454491860" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ref-whatsapp"/></svg>WhatsApp</a>
+          </div>
+          <a class="home-hero-service-link" href="#hizmetler"><svg aria-hidden="true"><use href="#ref-arrow"/></svg>Hizmetlerimiz</a>
         </div>
-        <a class="hero-service-link" href="#hizmetler">Hizmetlerimiz</a>
-      </div>
-      <div class="hero-strip" aria-label="Öne çıkan bilgiler">
-        <div>
-          <span class="stat-icon"><img src="assets/icons/support-24-light.png" alt=""></span>
-          <strong>7/24</strong>
-          <span>Acil Destek</span>
-        </div>
-        <div>
-          <span class="stat-icon"><img src="assets/icons/location-pin-light.png" alt=""></span>
-          <strong>Eskişehir & Afyon</strong>
-          <span>Hizmet Bölgesi</span>
-        </div>
-        <div>
-          <span class="stat-icon"><img src="assets/icons/team-light.png" alt=""></span>
-          <strong>Profesyonel</strong>
-          <span>Ekip</span>
+
+        <div class="home-hero-stats" aria-label="Öne çıkan hizmet bilgileri">
+          <div class="home-hero-stat">
+            <span class="home-hero-stat-icon"><img src="assets/icons/support-24-light.png" alt="" width="24" height="24"></span>
+            <div><strong>7/24</strong><span>Acil Destek</span></div>
+          </div>
+          <div class="home-hero-stat">
+            <span class="home-hero-stat-icon"><img src="assets/icons/location-pin-light.png" alt="" width="24" height="24"></span>
+            <div><strong>Eskişehir &amp;<br>Afyon</strong><span>Hizmet Bölgesi</span></div>
+          </div>
+          <div class="home-hero-stat">
+            <span class="home-hero-stat-icon"><img src="assets/icons/team-light.png" alt="" width="24" height="24"></span>
+            <div><strong>Profesyonel</strong><span>Ekip</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="intro section-pad">
-      <div class="section-heading">
-        <p class="eyebrow">Ne yapıyoruz?</p>
-        <h2>Tarla, yol ve şantiye ihtiyaçları için tek noktadan destek.</h2>
+    <section class="ref-services" id="hizmetler" aria-label="Hizmetlerimiz">
+      <div class="ref-service-grid">
+        <a class="ref-service-card" href="arac-kurtarma.html">
+          <div class="ref-card-photo ref-card-photo--recovery"><img src="assets/images/arac-kurtarma-servisi.webp" alt="FEZA araç kurtarma ve oto çekici hizmeti" width="1448" height="1086" loading="lazy"></div>
+          <div class="ref-card-content"><span class="ref-card-index">YOLDA YANINIZDAYIZ</span><h2>Araç Kurtarma</h2><p>Yolda kalan, saplanan veya taşınması gereken araçlar için güvenli kurtarma ve oto çekici desteği.</p><span class="ref-card-link">Hizmeti incele <svg><use href="#ref-arrow"/></svg></span></div>
+        </a>
+        <a class="ref-service-card" href="bobcat-hizmeti.html">
+          <div class="ref-card-photo ref-card-photo--bobcat"><img src="assets/images/bobcat-1.webp" alt="FEZA Bobcat kazı ve saha düzenleme hizmeti" width="1447" height="963" loading="lazy"></div>
+          <div class="ref-card-content"><span class="ref-card-index">SAHANIN GÜCÜ</span><h2>Bobcat Hizmeti</h2><p>Kazı, dolgu, tesviye ve saha düzenleme işlerinde çevik ekipman, kontrollü çalışma.</p><span class="ref-card-link">Hizmeti incele <svg><use href="#ref-arrow"/></svg></span></div>
+        </a>
+        <a class="ref-service-card" href="drone-ile-tarimsal-ilaclama.html">
+          <div class="ref-card-photo ref-card-photo--drone"><img src="assets/images/Drone-1.jpeg" alt="FEZA drone ile tarımsal ilaçlama hizmeti" width="2560" height="1440" loading="lazy"></div>
+          <div class="ref-card-content"><span class="ref-card-index">TEKNOLOJİNİN HASSASİYETİ</span><h2>Drone İlaçlama</h2><p>Tarla, bahçe ve eğimli arazilerde hızlı, homojen ve hedefli tarımsal uygulama.</p><span class="ref-card-link">Hizmeti incele <svg><use href="#ref-arrow"/></svg></span></div>
+        </a>
       </div>
-      <p>FEZA Kurtarma, Eskişehir ve Afyonkarahisar bölgesinde kritik birkaç hizmet alanına odaklanmaktadır: Drone ile tarımsal ilaçlama, güvenli araç kurtarma, araç çekme, oto çekici ve çevik bobcat desteği ile kaliteli hizmet sunmaktadır. Çifteler ve Emirdağ çevresi başta olmak üzere gelen talepler konuma, aciliyete ve ekipman uygunluğuna göre hızlıca değerlendirilir.</p>
+      <div class="ref-service-note"><span><i></i>7/24 acil destek</span><p>Eskişehir ve Afyonkarahisar'da ihtiyacınıza uygun ekipmanla sahadayız.</p><a href="#iletisim">Birlikte planlayalım <span>↗</span></a></div>
     </section>
 
-    <section class="services section-pad" id="hizmetler">
-      <div class="section-heading centered">
-        <p class="eyebrow">İşte Bunları Yapıyoruz</p>
-        <h2>Sunduğumuz Hizmetler</h2>
+    <section class="gallery section-pad" id="galeri">
+      <div class="gallery-heading-row">
+        <div class="section-heading">
+          <p class="eyebrow">Sahadan görünüm</p>
+          <h2 id="gallery-heading">Modern ekipman, temiz iş akışı.</h2>
+        </div>
+        <button class="gallery-autoplay" type="button" data-gallery-autoplay aria-label="Otomatik geçişleri duraklat" aria-pressed="true" hidden>
+          <svg class="gallery-pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6v12M15 6v12"/></svg>
+          <svg class="gallery-play-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg>
+          <span>Otomatik geçiş</span>
+        </button>
       </div>
-
-      <div class="service-grid">
-        <a class="service-card service-card--drone reveal" href="drone-ile-tarimsal-ilaclama.html">
-          <img src="assets/images/Drone-1.jpeg" alt="Eskişehir drone ile tarımsal ilaçlama hizmeti" loading="lazy">
-          <div class="service-content">
-            <span class="service-number">01</span>
-            <h3>Drone ile Tarımsal İlaçlama</h3>
-            <p>Tarla, bahçe ve eğimli arazilerde hızlı, kontrollü ve homojen ilaçlama uygulaması.</p>
-            <div class="service-points">
-              <span>Tarla ve bahçe</span>
-              <span>Hedefli uygulama</span>
-              <span>Zaman tasarrufu</span>
-            </div>
-            <span class="service-link">Drone İlaçlama Detayları</span>
+      <div class="field-gallery" data-gallery role="region" aria-roledescription="karusel" aria-labelledby="gallery-heading">
+        <div class="gallery-thumbnails" data-gallery-thumbnails aria-label="Fotoğraf seç" hidden></div>
+        <div class="gallery-stage">
+          <div class="gallery-track" data-gallery-track tabindex="0" aria-label="Fotoğraflar; sağ ve sol ok tuşlarıyla gezinin">
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-13.webp" data-gallery-open aria-label="Bobcat çatal ataşmanıyla büyük çuval taşıma çalışması fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-13.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-13-thumb.webp" alt="Bobcat çatal ataşmanıyla büyük çuval taşıma çalışması" width="900" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Sahada yük taşıma.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-01.webp" data-gallery-open aria-label="Yapı kenarındaki dar alanda Bobcat ile saha hazırlığı fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-01.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-01-thumb.webp" alt="Yapı kenarındaki dar alanda Bobcat ile saha hazırlığı" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Dar alanda saha hazırlığı.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-02.webp" data-gallery-open aria-label="Bobcat kepçesiyle zemin düzenleme çalışması fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-02.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-02-thumb.webp" alt="Bobcat kepçesiyle zemin düzenleme çalışması" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Kontrollü zemin düzenleme.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-03.webp" data-gallery-open aria-label="Merdiven yanında çalışan Bobcat kompakt yükleyici fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-03.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-03-thumb.webp" alt="Merdiven yanında çalışan Bobcat kompakt yükleyici" width="900" height="1125" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Yapı çevresinde çalışma.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-04.webp" data-gallery-open aria-label="Çelik çatı altındaki şantiyede Bobcat yükleyici fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-04.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-04-thumb.webp" alt="Çelik çatı altındaki şantiyede Bobcat yükleyici" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Şantiyede güçlü destek.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-05.webp" data-gallery-open aria-label="Yapı çevresinde Bobcat ile kazı ve toprak düzenleme fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-05.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-05-thumb.webp" alt="Yapı çevresinde Bobcat ile kazı ve toprak düzenleme" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Kazı ve saha düzenleme.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-06.webp" data-gallery-open aria-label="Bobcat ile yapı çevresinde zemin tesviye çalışması fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-06.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-06-thumb.webp" alt="Bobcat ile yapı çevresinde zemin tesviye çalışması" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Zemin tesviye çalışması.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-07.webp" data-gallery-open aria-label="Taşıma aracı rampasındaki Bobcat yükleyici fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-07.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-07-thumb.webp" alt="Taşıma aracı rampasındaki Bobcat yükleyici" width="900" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Ekipman sahaya hazırlanıyor.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-08.webp" data-gallery-open aria-label="Bahçe alanında Bobcat ile çevre düzenleme çalışması fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-08.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-08-thumb.webp" alt="Bahçe alanında Bobcat ile çevre düzenleme çalışması" width="900" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Bahçe ve çevre düzenlemesi.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-09.webp" data-gallery-open aria-label="Kamyon yanında çalışan Bobcat yükleyici fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-09.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-09-thumb.webp" alt="Kamyon yanında çalışan Bobcat yükleyici" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Sahada yükleme desteği.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-10.webp" data-gallery-open aria-label="Yapılar arasındaki dar geçitte Bobcat çalışması fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-10.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-10-thumb.webp" alt="Yapılar arasındaki dar geçitte Bobcat çalışması" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Dar geçitlerde çevik çalışma.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-11.webp" data-gallery-open aria-label="Açık alanda kepçesiyle zemin hazırlayan Bobcat fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-11.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-11-thumb.webp" alt="Açık alanda kepçesiyle zemin hazırlayan Bobcat" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Açık alanda zemin hazırlığı.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
+            <figure class="gallery-slide" data-gallery-slide>
+              <a class="gallery-photo" href="assets/images/gallery/feza-sahadan-12.webp" data-gallery-open aria-label="Taşıma aracı üzerinde sahaya sevk edilen Bobcat fotoğrafını büyüt">
+                <img src="assets/images/gallery/feza-sahadan-12.webp" data-gallery-thumb="assets/images/gallery/feza-sahadan-12-thumb.webp" alt="Taşıma aracı üzerinde sahaya sevk edilen Bobcat" width="901" height="1600" loading="lazy" decoding="async">
+                <span class="gallery-expand-hint" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"/></svg>Büyük görüntüle</span>
+              </a>
+              <figcaption><div><p>Bobcat hizmeti</p><h3>Yeni görev için yola hazır.</h3></div><span>FEZA Kurtarma · Sahadan</span></figcaption>
+            </figure>
           </div>
-        </a>
+          <button class="gallery-step gallery-step--previous" type="button" data-gallery-previous aria-label="Önceki fotoğraf" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button class="gallery-step gallery-step--next" type="button" data-gallery-next aria-label="Sonraki fotoğraf" hidden><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+        </div>
+        <p class="gallery-announcement" data-gallery-announcement aria-live="polite" aria-atomic="true"></p>
+      </div>
+      <dialog class="gallery-lightbox" data-gallery-lightbox aria-label="Fotoğrafın büyük görünümü">
+        <div class="gallery-lightbox-header"><span>FEZA <b>KURTARMA</b><small>Sahadan görünüm</small></span><button class="gallery-lightbox-close" type="button" data-gallery-close aria-label="Büyük görünümü kapat"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M6 18 18 6"/></svg></button></div>
+        <div class="gallery-lightbox-stage">
+          <img data-gallery-full-image alt="">
+          <button class="gallery-step gallery-step--previous" type="button" data-gallery-full-previous aria-label="Önceki fotoğraf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m14 5-7 7 7 7"/></svg></button>
+          <button class="gallery-step gallery-step--next" type="button" data-gallery-full-next aria-label="Sonraki fotoğraf"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m10 5 7 7-7 7"/></svg></button>
+        </div>
+        <p class="gallery-lightbox-caption" data-gallery-full-caption aria-live="polite"></p>
+      </dialog>
+    </section>
 
-        <a class="service-card service-card--recovery reveal" href="arac-kurtarma.html">
-          <img src="assets/images/arac-kurtarma-servisi.webp" alt="Eskişehir araç kurtarma hizmeti" loading="lazy">
-          <div class="service-content">
-            <span class="service-number">02</span>
-            <h3>Araç Kurtarma ve Araç Çekme</h3>
-            <p>Yolda kalan, saplanan veya taşınması gereken araçlar için hızlı ve güvenli kurtarma, çekme ve oto çekici desteği.</p>
-            <div class="service-points">
-              <span>Acil destek</span>
-              <span>Oto çekici desteği</span>
-              <span>Konuma göre yönlendirme</span>
-            </div>
-            <span class="service-link">Araç Kurtarma Detayları</span>
-          </div>
-        </a>
+    <section class="cta-band">
+      <div>
+        <p class="eyebrow">Acele işlerde vakit kaybetmeyin</p>
+        <h2>Eskişehir veya Afyonkarahisar içindeki konumunuzu ve ihtiyacınızı gönderin, size en uygun çözümü söyleyelim.</h2>
+      </div>
+      <a class="button light" href="#iletisim">İletişime Geç</a>
+    </section>
 
-        <a class="service-card service-card--bobcat reveal" href="bobcat-hizmeti.html">
-          <img src="assets/images/bobcat-1.webp" alt="Eskişehir bobcat hizmeti" loading="lazy">
-          <div class="service-content">
-            <span class="service-number">03</span>
-            <h3>Bobcat Hizmeti</h3>
-            <p>Kazı, dolgu, tesviye ve saha düzenleme işleri için pratik bobcat ekipman desteği.</p>
-            <div class="service-points">
-              <span>Kazı ve dolgu</span>
-              <span>Tesviye</span>
-              <span>Saha düzenleme</span>
-            </div>
-            <span class="service-link">Bobcat Hizmeti Detayları</span>
-          </div>
-        </a>
+    <section class="faq section-pad" id="sss" aria-labelledby="faq-heading">
+      <div class="faq-layout">
+        <div class="faq-intro">
+          <p class="eyebrow">Sık sorulanlar</p>
+          <h2 id="faq-heading">Merak<br> ettikleriniz.</h2>
+          <p class="faq-intro-copy">Detayları konuşmak isterseniz arayın ya da WhatsApp’tan konum ve fotoğraf gönderin.</p>
+          <a class="faq-message" href="https://wa.me/905454491860" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ref-whatsapp"/></svg>WhatsApp’tan sorun<span aria-hidden="true">↗</span></a>
+          <a class="faq-call" href="tel:+905454491860">Telefonla görüşelim <span>0545 449 18 60</span></a>
+        </div>
+        <div class="faq-list">
+          <details class="faq-question" name="common-questions" open>
+            <summary><span>Çekici çağırırken ne paylaşmalıyım?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>Konumunuzu, araç modelini ve aracın durumunu paylaşmanız yeterli. Araç hareket etmiyorsa, tekerleği kilitliyse veya zemine saplandıysa bunu da belirtin.</p></div>
+          </details>
+          <details class="faq-question" name="common-questions">
+            <summary><span>Ne kadar sürede gelebilirsiniz?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>Bulunduğunuz konuma ve ekibin o anki işine bağlı. Konumunuzu ilettiğinizde tahmini varış süresini telefonla netleştirebiliriz.</p></div>
+          </details>
+          <details class="faq-question" name="common-questions">
+            <summary><span>Ücreti nasıl öğrenebilirim?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>İşin türü, mesafe ve gereken ekipman fiyatı etkiliyor. Konumla birlikte aracın ya da çalışma alanının fotoğrafını gönderin; işin kapsamını ve ücreti konuşalım.</p></div>
+          </details>
+          <details class="faq-question" name="common-questions">
+            <summary><span>Bobcat dar bir alana girebilir mi?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>Geçiş genişliği, zemin ve yapılacak iş belirleyici. Alanın fotoğrafını ve giriş ölçüsünü gönderirseniz uygunluğu değerlendirebiliriz.</p></div>
+          </details>
+          <details class="faq-question" name="common-questions">
+            <summary><span>Drone ilaçlama için hangi bilgiler gerekiyor?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>Ürün türünü, arazinin konumunu ve yaklaşık alanını paylaşın. Uygulamanın zamanı ve ayrıntıları arazi ile hava koşullarına göre planlanır.</p></div>
+          </details>
+          <details class="faq-question" name="common-questions">
+            <summary><span>Çifteler dışına da geliyor musunuz?</span><i class="faq-symbol" aria-hidden="true"></i></summary>
+            <div class="faq-answer"><p>Evet. Eskişehir ve Afyonkarahisar çevresinden gelen talepler için konum ve ekip uygunluğuna göre planlama yapıyoruz.</p></div>
+          </details>
+        </div>
       </div>
     </section>
 
@@ -257,51 +395,6 @@
         <span class="district-chip district-chip--afyon">İscehisar</span>
         <span class="district-chip district-chip--afyon">Sinanpaşa</span>
         <span class="district-chip district-chip--afyon">Sultandağı</span>
-      </div>
-    </section>
-
-    <section class="faq section-pad" id="sss">
-      <div class="section-heading">
-        <p class="eyebrow">Sık sorulanlar</p>
-        <h2>Eskişehir ve Afyonkarahisar için hızlı cevaplar.</h2>
-      </div>
-      <div class="faq-grid">
-        <article class="faq-item">
-          <h3>Hangi bölgelerde hizmet veriyorsunuz?</h3>
-          <p>Eskişehir ve Afyonkarahisar genelinde hizmet veriyoruz. Eskişehir tarafında Çifteler, Odunpazarı, Tepebaşı, Sivrihisar, Mahmudiye ve çevre ilçeler; Afyonkarahisar tarafında Emirdağ, Bolvadin, Çay, Dinar, Sandıklı ve yakın bölgeler öncelikli değerlendirilir.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Araç çekme veya oto çekici için nasıl ulaşabilirim?</h3>
-          <p>Araç kurtarma, araç çekme ve oto çekici talepleri için telefonla arayabilir veya WhatsApp üzerinden konum gönderebilirsiniz. Aracın durumu, yol şartları ve bulunduğunuz ilçe bilgisine göre en uygun yönlendirme yapılır.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Drone ilaçlama hangi arazilerde yapılır?</h3>
-          <p>Tarla, bahçe, bağ ve traktör girişinin zor olduğu arazilerde drone ile tarımsal ilaçlama planlanabilir. Uygulama öncesinde ürün tipi, arazi yapısı ve ilaçlama alanı değerlendirilir.</p>
-        </article>
-        <article class="faq-item">
-          <h3>Bobcat hizmeti hangi işler için uygundur?</h3>
-          <p>Bobcat hizmeti kazı, dolgu, tesviye, saha düzenleme, bahçe ve şantiye hazırlığı gibi kısa süreli veya planlı işlerde kullanılır. İşin kapsamına göre çalışma süresi ve ekipman planı netleştirilir.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="cta-band">
-      <div>
-        <p class="eyebrow">Acele işlerde vakit kaybetmeyin</p>
-        <h2>Eskişehir veya Afyonkarahisar içindeki konumunuzu ve ihtiyacınızı gönderin, size en uygun çözümü söyleyelim.</h2>
-      </div>
-      <a class="button light" href="#iletisim">İletişime Geç</a>
-    </section>
-
-    <section class="gallery section-pad" id="galeri">
-      <div class="section-heading">
-        <p class="eyebrow">Sahadan görünüm</p>
-        <h2>Modern ekipman, temiz iş akışı.</h2>
-      </div>
-      <div class="gallery-grid">
-        <img class="tall reveal" src="assets/images/Drone-3.webp" alt="Eskişehir tarım alanında drone ile görüntüleme" loading="lazy">
-        <img class="reveal" src="assets/images/bobcat-2.webp" alt="Eskişehir bobcat iş makinesi" loading="lazy">
-        <img class="reveal" src="assets/images/arac-kurtarma-servisi.webp" alt="Eskişehir araç kurtarma için güçlü Kurtarma aracı" loading="lazy">
       </div>
     </section>
 
@@ -355,12 +448,13 @@
     </section>
   </main>
 
-  <footer class="site-footer">
-    <a class="brand" href="#top">
-      <img class="brand-logo" src="assets/logo.png" alt="FEZA Kurtarma logo">
-      <span>FEZA</span>
-    </a>
-    <p>Eskişehir ve Afyonkarahisar Drone ile Tarımsal İlaçlama, Araç Kurtarma, Araç Çekme, Oto Çekici ve Bobcat Hizmeti - Copyright © 2026 Tüm Hakları Saklıdır.</p>
+  <footer class="site-footer" id="site-footer">
+    <div class="footer-layout">
+      <div class="footer-brand-block"><a class="ref-brand" href="index.html" aria-label="FEZA Kurtarma ana sayfa"><img class="ref-brand-logo" src="assets/logo.png" alt="" width="48" height="48"><span><b>FEZA</b><em>KURTARMA</em></span></a><p>Yolda, sahada, tarlada.<br>İhtiyacınız olduğunda yanınızdayız.</p></div>
+      <nav class="footer-services" aria-label="Footer hizmetler"><h2>Hizmetlerimiz</h2><a href="arac-kurtarma.html">Araç Kurtarma</a><a href="bobcat-hizmeti.html">Bobcat Hizmeti</a><a href="drone-ile-tarimsal-ilaclama.html">Drone İlaçlama</a></nav>
+      <div class="footer-contact"><h2>Bize ulaşın</h2><a class="footer-phone" href="tel:+905454491860"><svg aria-hidden="true"><use href="#ref-phone"/></svg>+90 545 449 18 60</a><address><a class="footer-address" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x14ce792b303f6dfb:0x8b465dcba9c3071a?sa=X&amp;ved=1t:8290&amp;ictx=111" target="_blank" rel="noopener noreferrer"><svg aria-hidden="true"><use href="#ref-location"/></svg><span>Adalar, Yıldırım Cd. No:18/C<br>26700 Çifteler/Eskişehir<small>Konumu haritada gör ↗</small></span></a></address></div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 FEZA Kurtarma. Tüm hakları saklıdır.</p><span>Eskişehir &amp; Afyonkarahisar</span></div>
   </footer>
 
   <div class="mobile-actions" aria-label="Hızlı iletişim">
@@ -369,5 +463,6 @@
   </div>
 
   <script src="script.js"></script>
+  <script src="gallery.js"></script>
 </body>
 </html>
